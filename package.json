@@ -12,11 +12,17 @@
       "hash": "QmTxLSvdhwg68WJimdS6icLPhZi28aTp6b7uihC2Yb47Xk",
       "name": "go-datastore",
       "version": "0.2.0"
+    },
+    {
+      "author": "whyrusleeping",
+      "hash": "QmdjfJJFxgqqR9skVZDmgiGrbKomSqxpaw12rjLNim5NYR",
+      "name": "failstore",
+      "version": "1.0.0"
     }
   ],
   "gxVersion": "0.8.0",
   "language": "go",
   "license": "",
   "name": "retry-datastore",
-  "version": "0.0.0"
+  "version": "1.0.0"
 }
