@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	ds "github.com/ipfs/go-datastore"
+	ds "gx/ipfs/QmTxLSvdhwg68WJimdS6icLPhZi28aTp6b7uihC2Yb47Xk/go-datastore"
 )
 
 type Datastore struct {
@@ -12,7 +12,7 @@ type Datastore struct {
 	Retries     int
 	Delay       time.Duration
 
-	ds.Datastore
+	ds.Batching
 }
 
 var errFmtString = "ran out of retries trying to get past temporary error: %s"
@@ -39,7 +39,7 @@ func (d *Datastore) Get(k ds.Key) (interface{}, error) {
 	var val interface{}
 	err := d.runOp(func() error {
 		var err error
-		val, err = d.Datastore.Get(k)
+		val, err = d.Batching.Get(k)
 		return err
 	})
 
@@ -48,7 +48,7 @@ func (d *Datastore) Get(k ds.Key) (interface{}, error) {
 
 func (d *Datastore) Put(k ds.Key, val interface{}) error {
 	return d.runOp(func() error {
-		return d.Datastore.Put(k, val)
+		return d.Batching.Put(k, val)
 	})
 }
 
@@ -56,7 +56,7 @@ func (d *Datastore) Has(k ds.Key) (bool, error) {
 	var has bool
 	err := d.runOp(func() error {
 		var err error
-		has, err = d.Datastore.Has(k)
+		has, err = d.Batching.Has(k)
 		return err
 	})
 	return has, err

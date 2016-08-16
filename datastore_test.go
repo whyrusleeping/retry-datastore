@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	ds "github.com/ipfs/go-datastore"
-	failstore "github.com/whyrusleeping/failstore"
+	ds "gx/ipfs/QmTxLSvdhwg68WJimdS6icLPhZi28aTp6b7uihC2Yb47Xk/go-datastore"
+	failstore "gx/ipfs/QmdjfJJFxgqqR9skVZDmgiGrbKomSqxpaw12rjLNim5NYR/failstore"
 )
 
 func TestRetryFailure(t *testing.T) {
@@ -18,8 +18,8 @@ func TestRetryFailure(t *testing.T) {
 	})
 
 	rds := &Datastore{
-		Datastore: fstore,
-		Retries:   5,
+		Batching: fstore,
+		Retries:  5,
 		TempErrFunc: func(err error) bool {
 			return err == myErr
 		},
@@ -48,8 +48,8 @@ func TestRealErrorGetsThrough(t *testing.T) {
 	})
 
 	rds := &Datastore{
-		Datastore: fstore,
-		Retries:   5,
+		Batching: fstore,
+		Retries:  5,
 		TempErrFunc: func(err error) bool {
 			return false
 		},
@@ -86,8 +86,8 @@ func TestRealErrorAfterTemp(t *testing.T) {
 	})
 
 	rds := &Datastore{
-		Datastore: fstore,
-		Retries:   5,
+		Batching: fstore,
+		Retries:  5,
 		TempErrFunc: func(err error) bool {
 			return err == tempErr
 		},
@@ -113,8 +113,8 @@ func TestSuccessAfterTemp(t *testing.T) {
 	})
 
 	rds := &Datastore{
-		Datastore: fstore,
-		Retries:   5,
+		Batching: fstore,
+		Retries:  5,
 		TempErrFunc: func(err error) bool {
 			return err == tempErr
 		},
