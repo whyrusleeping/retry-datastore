@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	ds "gx/ipfs/QmTxLSvdhwg68WJimdS6icLPhZi28aTp6b7uihC2Yb47Xk/go-datastore"
+	ds "github.com/ipfs/go-datastore"
 )
 
 type Datastore struct {

@@ -9,20 +9,20 @@
   "gxDependencies": [
     {
       "author": "jbenet",
-      "hash": "QmTxLSvdhwg68WJimdS6icLPhZi28aTp6b7uihC2Yb47Xk",
+      "hash": "QmNgqJarToRiq2GBaPJhkmW4B5BxS5B74E1rkGvv2JoaTp",
       "name": "go-datastore",
-      "version": "0.2.0"
+      "version": "0.2.1"
     },
     {
       "author": "whyrusleeping",
-      "hash": "QmdjfJJFxgqqR9skVZDmgiGrbKomSqxpaw12rjLNim5NYR",
+      "hash": "QmQzoB7kvw15FiCBpsYhu96wyweGTwCSNXcaNtwUefy9kE",
       "name": "failstore",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ],
   "gxVersion": "0.8.0",
   "language": "go",
   "license": "",
   "name": "retry-datastore",
-  "version": "1.1.0"
+  "version": "1.1.1"
 }
