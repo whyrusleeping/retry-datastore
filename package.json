@@ -9,15 +9,15 @@
   "gxDependencies": [
     {
       "author": "jbenet",
-      "hash": "QmdHG8MAuARdGHxx4rPQASLcvhz24fzjSQq7AJRAQEorq5",
+      "hash": "QmPpegoMqhAEqjncrzArm7KVWAkCm78rqL2DPuNjhPrshg",
       "name": "go-datastore",
-      "version": "1.4.0"
+      "version": "1.4.1"
     },
     {
       "author": "whyrusleeping",
-      "hash": "QmWpcmY1DgPxKwMq3MWxxYx7QH61pfeQHQZSPqHjhwqT6t",
+      "hash": "QmPa81w9aTcax5JnkdMqN7bLPCSMSeBQEuUDX1UF1Sv6k1",
       "name": "failstore",
-      "version": "1.0.5"
+      "version": "1.0.6"
     }
   ],
   "gxVersion": "0.8.0",
@@ -25,6 +25,6 @@
   "license": "",
   "name": "retry-datastore",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "1.1.5"
+  "version": "1.1.6"
 }
 
